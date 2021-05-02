@@ -1,0 +1,241 @@
+/* Geral */
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    color: #4d4d4d;
+    margin: 0;
+}
+
+/* Navegação */
+h1, h2, h3{
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+nav{
+    display: flex;/* Para adaptação em linhas e colunas*/
+    flex-direction: column;/* Diz em que diração vai se adaptar, no caso em coluna*/
+    align-items: center;/* Alinhamento dos itens */
+    background-color: #4d4d4d;
+}
+
+nav > a{/* O maior que indica que as tag <a></a> direct ou seja que pertencente direto a tag <nav></nav> serão estilizadas da seguinte forma */
+    text-decoration: none;/* Tira o sublinhado */
+    color: #f1f1f1;
+    font-weight: bold;/* Intensidade da cor que será negrito */
+    font-size: 28px;
+    font-family: Pacifico, serif;
+}
+
+nav ul{/* Indica que as tag <ul></ul> dentro da tag <nav></nav> que será estilizado */
+    padding: 0;/* A margem interna é zero */
+    margin: 0;/* A margem externa é zero */
+    display: flex;/* Para adaptação em linhas e colunas */
+    flex-direction: column;/* A direção em que será feita a adaptação */
+    align-items: center;/* Alinhamentos dos itens que será centralizado */
+    width: 100%;
+}
+
+nav ul li{/* Indica que as tags <li></li> que pertence a <ul></ul> que pertence a <nav></nav> que será estilizada */
+    text-align: center;/* Indica o alinhamento dos intens que será centralizado */
+    width: 100%;
+    padding: 1%;/* Indica que a margem interna será 1 em porcentagem */
+}
+
+nav ul li a{/* Indica que as tags <a></a> pertencentes a <li></li>  que pertence <ul></ul> que pertence a <nav></nav> será estilizada */
+    display: inline-block;/* Permite o redimemsionamento na largura e na altura */
+    padding: 10px 0;/* Margem interna terá 10 pixels no topo e na base e 0 pixel na esquerda e direita */
+    width: 100%;
+    text-decoration: none;/* Tira o sublinado */
+    color: #f1f1f1;
+}
+
+nav li:hover {/* O hover indica que ao passar o mouse por cima irá ser feita alguma ação */
+    background-color: #a4a4a4;
+}
+
+.botao{
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #045fb4;
+    font-size: .9em;/* .9em serve para páginas responsivas pois se adaptam a diferentes telas */
+    border-radius: 4px;
+}
+
+/*Cabeçalho*/
+
+header{
+    background-image: url(Imagem/fundo.jpg);/* Inserindo imagem d efundo */
+    background-size: cover;/* Diz que o plano  deverá ser dimensionado até ocupar todo o canteiner */
+    background-position: center;/* O plano de fundo será centralizado */
+    background-repeat: no-repeat;/* Diz que o plano de fundo não se repetira */ 
+    color: #f1f1f1;/* Cor de fundo */
+    display: flex;/* Para adaptação em linhas e colunas*/
+    flex-direction: column;/* Diz em que diração vai se adaptar, no caso em coluna*/
+    align-items: center;/* itens alinhados ao centro */
+    text-align: center;/* Textos alinhados ao centro */
+    padding: 20px;/* a margem interna */
+}
+
+header p{
+    margin-bottom: 2em;/* Margem adaptável */
+}
+
+/* Sobre */
+
+#sobre{
+    display: flex;
+    Flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px 20px;
+    background-color: #045fb4;
+    color: #f1f1f1;
+}
+
+#sobre .botao{
+    background-color: #f1f1f1;
+    color: #4d4d4d;
+}
+
+#sobre p{
+    margin-bottom: 2.5em;
+    max-width: 1000px;
+}
+
+/* Serviços */
+
+#servicos{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#servicos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Portfolio */
+
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#portfolio h2{
+    margin-bottom: 20px;
+}
+
+#porfolio img{
+    width: 100%;
+}
+
+/* Contato */
+
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Footer */
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #4d4d4d;
+    color: #f1f1f1;
+}
+
+@media screen and (min-width: 768px){/* Para deixar o site responsivo */
+    
+    /* Navegação */
+    
+    nav{
+        flex-direction: row;/* Em que tipo de flexão da direção será feita */
+        justify-content: space-around;
+    }
+    
+    nav ul{
+        flex-direction: row;
+        width: 70%;
+    }
+    
+    /* Cabeçalho */
+    
+    header{
+        height: 60vh;/* Para o conteiner de header ocupar cerca de 605 da tela */
+        justify-content: space-around;
+    }
+    
+    /* sobre */
+    
+    #sobre{
+        height: 250px;
+        height: 30vh;
+        justify-content: space-around;
+        min-height: 250px;
+    }
+    
+    /* Serviços */
+    
+    #servicos{
+        flex-direction: row;/* Em que sentido as linhs serão quebradas */
+        flex-wrap: wrap;/* Quebrar de linhas */
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    #servicos h2{
+        text-align: center;
+        width: 100%;
+    }
+    
+    #servicos div{
+        flex-grow: 1;/* Os itens irão aumentar de forma porporcional ao soutros */
+        flex-basis: 150px;/* Regular a largura máxima para esses itens */
+        padding: 0 10px;
+    }
+    
+    /* Portfolio */
+    
+    #portfolio{
+        flex-direction: row;/* Em que sentido as linhs serão quebradas */
+        flex-wrap: wrap;/* Quebrar de linhas */
+    }
+    
+    #portfolio h2{
+        width: 100%;
+        text-align: center;
+    }
+    
+    #portfolio img{
+        width: 33%;
+    }
+    
+    /* Contato */
+    
+    #contato{
+        flex-direction: row;/* Em que sentido as linhs serão quebradas */
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 500px;
+        margin: 0 auto;/* Margem externas com zero e automáticas */
+    }
+    
+    #contato h2,
+    #contato p{
+        width: 100%;
+    }
+}
